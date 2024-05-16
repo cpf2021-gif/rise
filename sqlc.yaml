@@ -1,0 +1,10 @@
+version: "2"
+sql:
+  - engine: "mysql"
+    queries: "internal/repo/query"
+    schema: "internal/repo/schema"
+    gen:
+      go:
+        package: "db"
+        out: "internal/repo/db"
+        emit_result_struct_pointers: true
