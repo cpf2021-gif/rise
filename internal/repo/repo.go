@@ -4,9 +4,6 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/cpf2021-gif/rise/common/database"
-	"github.com/cpf2021-gif/rise/internal/conf"
-
 	"github.com/cpf2021-gif/rise/internal/repo/db"
 )
 
@@ -14,9 +11,9 @@ type Repo struct {
 	db *db.Queries
 }
 
-func NewRepo(conf *conf.Conf) *Repo {
+func NewRepo(query *db.Queries) *Repo {
 	return &Repo{
-		db: db.New(database.NewDB(conf.DB)),
+		db: query,
 	}
 }
 

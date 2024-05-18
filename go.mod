@@ -5,6 +5,7 @@ go 1.22.0
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-sql-driver/mysql v1.8.1
+	go.uber.org/dig v1.17.1
 	gopkg.in/yaml.v3 v3.0.1
 )
 
